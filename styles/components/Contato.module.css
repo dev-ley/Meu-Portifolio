@@ -1,0 +1,114 @@
+.contato {
+  padding: 6rem 3rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* CARD */
+.card {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #00bcd4;
+  box-shadow: 0 12px 30px rgba(0,188,212,0.25);
+}
+
+.icon {
+  font-size: 2.4rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn, .btnSecondary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* CV BUTTON */
+.btn {
+  background: #00bcd4;
+  color: #000;
+}
+
+.btn:hover {
+  background: #00d0e8;
+  transform: translateY(-4px);
+}
+
+/* WHATSAPP BUTTON */
+.btnSecondary {
+  background: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+}
+
+.btnSecondary:hover {
+  background: #00bcd4;
+  color: #000;
+  transform: translateY(-4px);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .contato {
+    padding: 4rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

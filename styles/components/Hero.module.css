@@ -1,0 +1,148 @@
+/* ==============================
+   HERO MODERNO COM SLIDESHOW
+   ============================== */
+
+.hero {
+  padding: 8rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+/* BLOCO DE TEXTO */
+.textBlock {
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.title span {
+  color: var(--accent-primary);
+}
+
+.subtitle {
+  margin-top: 1.2rem;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  background: var(--accent-primary);
+  color: #000;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.primaryBtn:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-4px);
+}
+
+.secondaryBtn {
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.secondaryBtn:hover {
+  background: var(--accent-primary);
+  color: #000;
+  transform: translateY(-4px);
+}
+
+.highlight {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* ==============================
+   SLIDESHOW RESPONSIVO
+   ============================== */
+
+.imageBlock {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  animation: fadeImage 1s ease;
+}
+
+/* Fade suave */
+@keyframes fadeImage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    margin: 1rem auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .heroImage {
+    max-width: 85%;
+  }
+}
+
+/* ANIMAÇÃO DE ENTRADA DO HERO */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
