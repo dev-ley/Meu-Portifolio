@@ -35,10 +35,10 @@ export default function Contato() {
           <p>ley.desenvolvedor@gmail.com</p>
         </a>
 
-        <a href="tel:+351924020289" className={styles.card}>
+        <a href="tel:+5521971620952" className={styles.card}>
           <FiPhone className={styles.icon} />
           <h3>{language === 'pt' ? 'Telefone' : 'Phone'}</h3>
-          <p>+351 924 020 289</p>
+          <p>+55 21 97162-0952</p>
         </a>
 
         <a
@@ -75,7 +75,7 @@ export default function Contato() {
         </a>
 
         <a
-          href="https://wa.me/351924020289"
+          href="https://wa.me/5521971620952"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.btnSecondary}
