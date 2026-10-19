@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
 
 :root {
@@ -8,8 +9,31 @@
   --accent-primary: #00B8D9;
   --accent-secondary: #4F46E5;
   --border-light: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   --radius: 16px;
   --transition: all 0.3s ease;
+}
+
+body.light {
+  --bg-primary: #F1F3F7;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #20232B;
+  --text-secondary: #555D6B;
+  --accent-primary: #008DA8;
+  --accent-secondary: #4F46E5;
+  --border-light: rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+  --bg-primary: #0B0C10;
+  --bg-secondary: #111217;
+  --text-primary: #FFFFFF;
+  --text-secondary: #D1D5DB;
+  --accent-primary: #00B8D9;
+  --accent-secondary: #4F46E5;
+  --border-light: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* RESET */
@@ -19,11 +43,17 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  min-height: 100vh;
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 section {
@@ -83,12 +113,12 @@ h2 {
   border-radius: var(--radius);
   padding: 2rem;
   transition: var(--transition);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: var(--card-shadow);
 }
 
 .card:hover {
   border-color: var(--accent-primary);
-  box-shadow: 0 12px 30px rgba(0,184,217,0.25);
+  box-shadow: 0 12px 30px rgba(0, 184, 217, 0.2);
   transform: translateY(-6px);
 }
 
@@ -101,8 +131,15 @@ h2 {
 
 /* ANIMATION */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section {

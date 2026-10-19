@@ -1,16 +1,14 @@
-/* ==============================
-   ABOUT SECTION
-   ============================== */
 
 .about {
   padding: 6rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  background: radial-gradient(circle at top left, #0a0a0f 0%, #0d1117 100%);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* CONTAINER */
 .container {
   display: flex;
   align-items: center;
@@ -19,7 +17,6 @@
   flex-wrap: wrap;
 }
 
-/* IMAGEM */
 .imageBlock {
   flex: 1;
   display: flex;
@@ -29,20 +26,17 @@
 .image {
   width: 100%;
   max-width: 401px;
-  height: auto; /* obrigatório para remover o warning */
+  height: auto;
   border-radius: 16px;
   box-shadow: 0 0 30px rgba(0, 188, 212, 0.25);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
-
 
 .image:hover {
   transform: scale(1.03);
   box-shadow: 0 0 40px rgba(0, 188, 212, 0.4);
 }
 
-/* TEXTO */
 .textBlock {
   flex: 1;
   max-width: 600px;
@@ -51,7 +45,7 @@
 .title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #00bcd4;
+  color: var(--accent-primary);
   margin-bottom: 1.2rem;
   letter-spacing: 0.5px;
 }
@@ -59,15 +53,14 @@
 .text {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #d1d5db;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
 }
 
 .text strong {
-  color: #00bcd4;
+  color: var(--accent-primary);
 }
 
-/* TABLET */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -87,7 +80,6 @@
   }
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
   .about {
     padding: 4rem 1.5rem;

@@ -1,8 +1,11 @@
+
 .footer {
   padding: 3rem 2rem;
-  background: #0d0d0d;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-light);
   text-align: center;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .socials {
@@ -13,29 +16,29 @@
 }
 
 .socials a {
-  color: #00bcd4;
+  color: var(--accent-primary);
   font-size: 1.8rem;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .socials a:hover {
-  color: #fff;
+  color: var(--accent-secondary);
   transform: translateY(-4px);
 }
 
 .copy {
-  color: #ccc;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
 
 .made {
-  color: #888;
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 .made span {
-  color: #00bcd4;
+  color: var(--accent-primary);
   font-weight: 600;
 }
 

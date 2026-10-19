@@ -1,34 +1,45 @@
+
 /* ==============================
-   HERO MODERNO COM SLIDESHOW
+   HERO
    ============================== */
 
 .hero {
+  min-height: 85vh;
   padding: 8rem 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   animation: fadeInUp 0.6s ease forwards;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  flex-wrap: wrap;
-  max-width: 1200px;
 }
 
-/* BLOCO DE TEXTO */
+/* TEXTO */
+
 .textBlock {
   flex: 1;
-  min-width: 300px;
+  min-width: 0;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--text-primary);
 }
 
 .title span {
@@ -36,42 +47,60 @@
 }
 
 .subtitle {
-  margin-top: 1.2rem;
-  font-size: 1.25rem;
-  color: var(--text-secondary);
   max-width: 650px;
-  line-height: 1.7;
+  margin-top: 1.4rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
 }
+
+/* BOTÕES */
 
 .buttons {
   margin-top: 2.5rem;
   display: flex;
+  align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .primaryBtn {
   background: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
   color: #000;
-  padding: 0.9rem 1.6rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
 }
 
 .primaryBtn:hover {
   background: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  color: #fff;
   transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(79, 70, 229, 0.2);
 }
 
 .secondaryBtn {
+  background: transparent;
   border: 2px solid var(--accent-primary);
   color: var(--accent-primary);
-  padding: 0.9rem 1.6rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
 }
 
 .secondaryBtn:hover {
@@ -80,69 +109,181 @@
   transform: translateY(-4px);
 }
 
+/* TECNOLOGIAS EM DESTAQUE */
+
 .highlight {
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
   color: var(--accent-primary);
   font-weight: 600;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-/* ==============================
-   SLIDESHOW RESPONSIVO
-   ============================== */
+/* IMAGEM / SLIDESHOW */
 
 .imageBlock {
-  flex: 1;
-  min-width: 280px;
+  flex: 0 0 400px;
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .heroImage {
+  display: block;
   width: 100%;
-  max-width: 380px;
-  border-radius: 18px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-  animation: fadeImage 1s ease;
+  height: 100%;
+  flex: 0 0 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--card-shadow);
+  animation: fadeImage 0.8s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-/* Fade suave */
+.heroImage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 188, 212, 0.18);
+}
+
+/* ANIMAÇÕES */
+
 @keyframes fadeImage {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-/* ==============================
-   RESPONSIVIDADE
-   ============================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLETS */
 
 @media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 6rem 2rem;
+  }
+
   .container {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 3rem;
+  }
+
+  .textBlock {
+    width: 100%;
+  }
+
+  .imageBlock {
+    flex: 0 0 340px;
+    width: 340px;
+    height: 340px;
   }
 
   .title {
-    font-size: 2.4rem;
+    font-size: clamp(2.2rem, 5vw, 2.8rem);
   }
 
   .subtitle {
-    margin: 1rem auto;
+    margin: 1.2rem auto 0;
   }
 
   .buttons {
     justify-content: center;
   }
 
-  .heroImage {
-    max-width: 85%;
+  .highlight {
+    margin-top: 1.8rem;
   }
 }
 
-/* ANIMAÇÃO DE ENTRADA DO HERO */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* CELULARES */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .container {
+    gap: 2.5rem;
+  }
+
+  .imageBlock {
+    flex: 0 0 280px;
+    width: min(100%, 280px);
+    height: 280px;
+  }
+
+  .title {
+    font-size: 2.1rem;
+    letter-spacing: -0.5px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
+
+  .imageBlock {
+    border-radius: 16px;
+  }
+
+  .highlight {
+    font-size: 0.85rem;
+  }
+}
+
+/* ACESSIBILIDADE: REDUZIR MOVIMENTO */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .heroImage {
+    animation: none;
+    transition: none;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    transition: none;
+  }
+
+  .heroImage:hover,
+  .primaryBtn:hover,
+  .secondaryBtn:hover {
+    transform: none;
+  }
 }

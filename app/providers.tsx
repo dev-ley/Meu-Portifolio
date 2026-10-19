@@ -1,21 +1,23 @@
+
 'use client'
 
+import { useEffect, type ReactNode } from 'react'
 import { Provider, useSelector } from 'react-redux'
 import { store } from '../store'
-import { RootState } from '../store'
-import { useEffect } from 'react'
+import type { RootState } from '../store'
 
-function ThemeApplier({ children }: { children: React.ReactNode }) {
+function ThemeApplier({ children }: { children: ReactNode }) {
   const mode = useSelector((state: RootState) => state.theme.mode)
 
   useEffect(() => {
-    document.body.className = mode
+    document.body.classList.remove('dark', 'light')
+    document.body.classList.add(mode)
   }, [mode])
 
   return children
 }
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+export default function Providers({ children }: { children: ReactNode }) {
   return (
     <Provider store={store}>
       <ThemeApplier>{children}</ThemeApplier>

@@ -1,5 +1,9 @@
+
 .skills {
   padding: 6rem 3rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .title {
@@ -7,7 +11,7 @@
   font-weight: 700;
   margin-bottom: 4rem;
   text-align: center;
-  color: #00bcd4;
+  color: var(--accent-primary);
 }
 
 /* GRID */
@@ -20,30 +24,37 @@
 
 /* CARD */
 .card {
-  background: #111;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  max-width: 340px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: #00bcd4;
-  box-shadow: 0 12px 30px rgba(0, 188, 212, 0.25);
+  border-color: var(--accent-primary);
+  box-shadow: 0 12px 30px rgba(0, 188, 212, 0.2);
 }
 
-/* ÍCONE PADRONIZADO */
+/* ICON */
 .icon {
   width: 60px;
   height: 60px;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00bcd4;
+  color: var(--accent-primary);
 }
 
 .icon svg {
@@ -51,22 +62,22 @@
   height: 100%;
 }
 
-/* NOME */
+/* SKILL NAME */
 .skillName {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-/* DESCRIÇÃO */
+/* DESCRIPTION */
 .desc {
-  color: #ccc;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.4;
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .skills {
     padding: 4rem 1.5rem;
