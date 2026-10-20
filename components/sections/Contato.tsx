@@ -67,7 +67,7 @@ export default function Contato() {
       <div className={styles.buttons}>
         <a
           href="/Wesley-Rodrigues-CV.pdf"
-          download
+          download="Wesley-Rodrigues-CV.pdf"
           className={styles.btn}
         >
           <FiDownload />
