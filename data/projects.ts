@@ -1,4 +1,3 @@
-
 export type Project = {
     title: string;
     description: string;
@@ -55,15 +54,26 @@ export const projects: Project[] = [
         image: '/images/projects/authflow.jpeg',
         link: 'https://auth-flow-mu-ten.vercel.app/',
         code: 'https://github.com/dev-ley/authflow',
-
     },
     {
-        title: 'App de Treino Mobile Web',
+        title: 'Workout React App',
         description:
-            'Aplicação web para auxiliar os treinos em casa ou na academia, facilitando o acesso aos exercícios e às rotinas de treino.',
-        tech: ['React', 'Node.js', 'SQL'],
-        image: '/images/projects/gym.png',
-        link: 'https://myappworkout.netlify.app/dashboard',
+            'Aplicação web de fitness desenvolvida para proporcionar uma experiência moderna e responsiva. Integra autenticação com Google, Firebase Authentication, Cloud Firestore com persistência local e infraestrutura de notificações push com Firebase Cloud Messaging. Utiliza React, TypeScript e Progressive Web App (PWA).',
+        tech: [
+            'React 19',
+            'TypeScript',
+            'Vite 8',
+            'React Router 7',
+            'Firebase Authentication',
+            'Cloud Firestore',
+            'Firebase Cloud Messaging',
+            'Progressive Web App',
+            'vite-plugin-pwa',
+            'Workbox',
+            'CSS',
+        ],
+        image: '/images/projects/WorkoutReactApp.jpeg',
+        link: 'https://workout-app-react-l3t9.vercel.app/',
         code: 'https://github.com/dev-ley/workout-app-react',
     },
     {

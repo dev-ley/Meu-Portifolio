@@ -7,7 +7,7 @@ O projeto foi criado com foco em uma interface moderna, responsiva e acessível,
 
 ## Prévia da aplicação
 
-![Dashboard do Portifólio](public/images/fullstack-portifolio.jpeg)
+![Dashboard do Portifólio](public/images/projects/WorkoutReactApp.jpeg)
 
 ## 🚀 Tecnologias utilizadas
 
